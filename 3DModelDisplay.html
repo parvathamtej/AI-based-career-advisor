@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Display</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #28837b; /* Light grey background */
+        }
+        model-viewer {
+            width: 100%;
+            height: 100vh;
+            transform: scale(1); /* Adjust scale value as needed */
+            transform-origin: center;
+        }
+    </style>
+</head>
+<body>
+
+<model-viewer src="test2.glb" alt="A 3D model of Tenali Rama" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" ar style="width: 100%; height: 100vh;"></model-viewer>
+
+</body>
+</html>
