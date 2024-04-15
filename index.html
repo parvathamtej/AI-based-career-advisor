@@ -8,19 +8,40 @@
     <style>
         body {
             margin: 0;
-            background-color: #28837b; /* Light grey background */
+            background-color: #28837b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
         }
+
         model-viewer {
             width: 100%;
-            height: 100vh;
-            transform: scale(1); /* Adjust scale value as needed */
-            transform-origin: center;
+            height: 60vh;
+            margin-bottom: 20px;
+        }
+        .intro-box {
+            background-color: #03b096;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-<model-viewer src="test2.glb" alt="A 3D model of Tenali Rama" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" ar style="width: 100%; height: 100vh;"></model-viewer>
+<div class="content-container">
+    <model-viewer src="test2.glb" alt="A 3D model of Tenali Rama" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" ar></model-viewer>
+    
+    <div class="intro-box">
+        <h3>Hi, I'm Tenali. Enter your information here:</h3>
+        <form id="userForm" action="/submit-form" method="POST">
+            <input type="text" name="name" id="nameInput" placeholder="Your name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
